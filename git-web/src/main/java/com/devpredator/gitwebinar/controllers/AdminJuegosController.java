@@ -7,6 +7,7 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
 
 import com.devpredator.gitwebinar.entity.Juego;
@@ -26,15 +27,16 @@ public class AdminJuegosController {
 	/**
 	 * Servicio que permite utilizar los metodos de logica de negocio para la administracion de juegos.
 	 */
+//	@ManagedProperty("#{adminJuegosServiceImpl}")
 	private AdminJuegosService adminJuegosServiceImpl;
 	
 	@PostConstruct
 	public void init() {
-		
+		this.consultarJuegos();
 	}
 	
 	public void consultarJuegos() {
-		
+//		this.juegos = this.adminJuegosServiceImpl.consultarJuegos();
 	}
 
 	/**
