@@ -12,6 +12,32 @@
       	<div class="ui-fluid">
 			<p:outputLabel value="Webinar Git y Github"></p:outputLabel>
       	</div>
+      	
+      	<h:form>
+		    <p:dataTable var="car" value="#{dtPaginatorView.cars}" rows="10"
+		                 paginator="true"
+		                 paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+		                 currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records"
+		                 rowsPerPageTemplate="5,10,15">
+		        <p:column headerText="#">
+		            <h:outputText value="#{car.id}" />
+		        </p:column>
+		 
+		        <p:column headerText="Juego">
+		            <h:outputText value="#{car.year}" />
+		        </p:column>
+		 
+		        <p:column headerText="Modo">
+		            <h:outputText value="#{car.brand}" />
+		        </p:column>
+		 
+		        <p:column headerText="Precio">
+		            <h:outputText value="#{car.color}" />
+		        </p:column>
+
+		    </p:dataTable>
+		</h:form>
+      	
       </h:body>
       
 </html>
